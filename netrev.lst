@@ -1,0 +1,82 @@
+(---------------------------------------------------------------------)
+(                                                                     )
+(    Allegro Netrev Import Logic                                      )
+(                                                                     )
+(    Drawing          : Arduino-UNO.brd                               )
+(    Software Version : 17.4S027                                      )
+(    Date/Time        : Fri Jul  8 22:27:35 2022                      )
+(                                                                     )
+(---------------------------------------------------------------------)
+
+
+------ Directives ------------
+
+Ripup etch:                  No
+Ripup delete first segment:  No
+Ripup retain bondwire:       No
+Ripup symbols:               Always
+Missing symbol has error:    No
+DRC update:                  Yes
+Schematic directory:         'C:/Users/moses/Desktop/Arduino-UNO/allegro'
+Design Directory:            'C:/Users/moses/Desktop/Arduino-UNO'
+Old design name:             'C:/Users/moses/Desktop/Arduino-UNO/Arduino-UNO.brd'
+New design name:             'C:/Users/moses/Desktop/Arduino-UNO/Arduino-UNO.brd'
+
+CmdLine: netrev -$ -i C:/Users/moses/Desktop/Arduino-UNO/allegro -y 1 -h -q netrev_constraint_report.xml C:/Users/moses/Desktop/Arduino-UNO/#Taaaaav22228.tmp
+
+------ Preparing to read pst files ------
+
+Starting to read C:/Users/moses/Desktop/Arduino-UNO/allegro/pstchip.dat 
+   Finished reading C:/Users/moses/Desktop/Arduino-UNO/allegro/pstchip.dat (00:00:00.01)
+Starting to read C:/Users/moses/Desktop/Arduino-UNO/allegro/pstxprt.dat 
+   Finished reading C:/Users/moses/Desktop/Arduino-UNO/allegro/pstxprt.dat (00:00:00.00)
+Starting to read C:/Users/moses/Desktop/Arduino-UNO/allegro/pstxnet.dat 
+   Finished reading C:/Users/moses/Desktop/Arduino-UNO/allegro/pstxnet.dat (00:00:00.00)
+
+------ Oversights/Warnings/Errors ------
+
+
+------ Library Paths ------
+MODULEPATH =  . 
+           c:/cadence/spb_17.4/share/local/pcb/modules 
+
+PSMPATH =  . 
+           C:/Users/moses/AppData/Roaming/SPB_Data/cdssetup/OrCAD_Capture/17.4.0/downloaded_parts/allegropcb 
+           .. 
+
+PADPATH =  . 
+           C:/Users/moses/AppData/Roaming/SPB_Data/cdssetup/OrCAD_Capture/17.4.0/downloaded_parts/allegropcb 
+           .. 
+
+
+------ Summary Statistics ------
+
+
+netrev run on Jul 8 22:27:35 2022
+   DESIGN NAME : 'ARDUINO-UNO'
+   PACKAGING ON Feb  5 2022 22:35:48
+
+   COMPILE 'logic'
+   CHECK_PIN_NAMES OFF
+   CROSS_REFERENCE OFF
+   FEEDBACK OFF
+   INCREMENTAL OFF
+   INTERFACE_TYPE PHYSICAL
+   MAX_ERRORS 500
+   MERGE_MINIMUM 5
+   NET_NAME_CHARS '#%&()*+-./:=>?@[]^_`|'
+   NET_NAME_LENGTH 24
+   OVERSIGHTS ON
+   REPLACE_CHECK OFF
+   SINGLE_NODE_NETS ON
+   SPLIT_MINIMUM 0
+   SUPPRESS   20
+   WARNINGS ON
+
+ No error detected
+ No oversight detected
+ No warning detected
+
+cpu time      0:00:52
+elapsed time  0:00:00
+

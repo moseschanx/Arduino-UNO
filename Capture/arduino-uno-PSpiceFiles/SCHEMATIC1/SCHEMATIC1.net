@@ -1,0 +1,22 @@
+* source ARDUINO-UNO
+R_R7         1M 
+R_R4         10K 
+R_R2         1K 
+R_R3         1K 
+R_R5         1M 
+R_R13         1K 
+R_R14         1K 
+X_D5         PARAMS:              
+R_R9         1K 
+R_R12         1K 
+R_R10         22R 
+R_R11         22R 
+R_R6         10K 
+R_R1         10K 
+R_R8         1K 
+R_R15         10K 
+R_R17         10K 
+R_R16         1K 
+X_D7         PARAMS:              
+X_D2         PARAMS:              
+X_D8         PARAMS:              

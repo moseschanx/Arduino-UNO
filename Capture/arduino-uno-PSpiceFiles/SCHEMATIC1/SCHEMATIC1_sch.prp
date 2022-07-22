@@ -1,0 +1,587 @@
+("FILE_TYPE"	"PMAP File"
+    ("devices"
+        ("RESISTOR"
+            ("info"
+                ("spice_dsg"	"R")
+                ("port_order"
+                    ("A")
+                    ("B")
+                )
+            )
+            ("model_params"
+                ("level_0"
+                    ("TC1"
+                        ("value"	"0")
+                    )
+                    ("TC2"
+                        ("value"	"0")
+                    )
+                    ("VALUE"
+                        ("value"	"0")
+                    )
+                )
+            )
+            ("smoke"
+                ("pre_smoke"
+                    ("NODE_VA"	"A")
+                    ("NODE_VB"	"B")
+                    ("DERATE_TYPE"	"RES")
+                )
+                ("max_ops"
+                    ("RV"	"VOLTAGE")
+                    ("PDM"	"POWER")
+                    ("SLP"	"SLOPE")
+                    ("RBA"	"1/SLP")
+                    ("TMAX"	"MAX_TEMP")
+                    ("TB"	"TMAX")
+                    ("RTKNEE"	"TKNEE")
+                    ("RTRISE"	"TRISE")
+                )
+                ("smoke_tests"
+                    ("PDM"
+                        ("test"	"power_test")
+                    )
+                    ("RV"
+                        ("test"	"abs_voltage_test")
+                        ("nodes"
+                            ("NODE_VA")
+                            ("NODE_VB")
+                        )
+                    )
+                    ("TB"
+                        ("test"	"temp_null_test")
+                    )
+                )
+                ("device_max_ops")
+            )
+        )
+        ("LED"
+            ("info"
+                ("spice_dsg"	"X")
+                ("port_order"
+                    ("1")
+                    ("2")
+                )
+            )
+            ("model_params"
+                ("level_0"
+                    ("IS"
+                        ("value"	"10f")
+                        ("postol"	"10")
+                        ("negtol"	"10")
+                        ("distrib"	"FLAT")
+                    )
+                    ("RS"
+                        ("value"	"0")
+                        ("postol"	"10")
+                        ("negtol"	"10")
+                        ("distrib"	"FLAT")
+                    )
+                    ("N"
+                        ("value"	"1")
+                    )
+                    ("TT"
+                        ("value"	"0")
+                    )
+                    ("CJO"
+                        ("value"	"0")
+                        ("postol"	"10")
+                        ("negtol"	"10")
+                        ("distrib"	"FLAT")
+                    )
+                    ("VJ"
+                        ("value"	"1")
+                    )
+                    ("M"
+                        ("value"	"0.5")
+                    )
+                    ("EG"
+                        ("value"	"1.11")
+                    )
+                    ("XTI"
+                        ("value"	"3")
+                    )
+                    ("KF"
+                        ("value"	"0")
+                    )
+                    ("AF"
+                        ("value"	"1")
+                    )
+                    ("FC"
+                        ("value"	"0.5")
+                    )
+                    ("BV"
+                        ("value"	"100")
+                        ("postol"	"10")
+                        ("negtol"	"10")
+                        ("distrib"	"FLAT")
+                    )
+                    ("IBV"
+                        ("value"	".001")
+                        ("postol"	"10")
+                        ("negtol"	"10")
+                        ("distrib"	"FLAT")
+                    )
+                )
+            )
+            ("smoke"
+                ("max_ops_desc"
+                    ("IF"
+                        ("description"	"Max forward current")
+                        ("unit"	"A")
+                    )
+                    ("VR"
+                        ("description"	"Peak reverse voltage")
+                        ("unit"	"V")
+                    )
+                    ("PDM"
+                        ("description"	"Max pwr dissipation")
+                        ("unit"	"W")
+                    )
+                    ("TJ"
+                        ("description"	"Max junction temp")
+                        ("unit"	"C")
+                    )
+                    ("RJC"
+                        ("description"	"J-C thermal resist")
+                        ("unit"	"C/W")
+                    )
+                    ("RCA"
+                        ("description"	"C-A thermal resist")
+                        ("unit"	"C/W")
+                    )
+                )
+                ("pre_smoke"
+                    ("TERM_AN"	"-1")
+                    ("NODE_AN"	"AN")
+                    ("NODE_CAT"	"CAT")
+                    ("DERATE_TYPE"	"DIODE")
+                )
+                ("max_ops"
+                    ("RCA"	"RCA")
+                    ("IF"	"IF")
+                    ("PDM"	"PDM")
+                    ("VR"	"VR")
+                )
+                ("smoke_tests"
+                    ("IF"
+                        ("test"	"current_test")
+                        ("term"	"TERM_AN")
+                    )
+                    ("PDM"
+                        ("test"	"power_test")
+                    )
+                    ("TJ"
+                        ("test"	"temp_null_test")
+                    )
+                    ("VR"
+                        ("test"	"voltage_test")
+                        ("nodes"
+                            ("NODE_CAT")
+                            ("NODE_AN")
+                        )
+                    )
+                )
+                ("device_max_ops"
+                    ("IF"	"0.25")
+                    ("VR"	"5")
+                    ("PDM"	"50E-3")
+                    ("TJ"	"150")
+                    ("RJC"	"1")
+                    ("RCA"	"1")
+                )
+                ("device_pre_smoke"
+                    ("TERM_AN"	"1")
+                    ("NODE_AN"	"1")
+                    ("NODE_CAT"	"2")
+                    ("DERATE_TYPE"	"DIODE")
+                )
+            )
+        )
+    )
+    ("instances"
+        ("R7"
+            ("device_name"	"RESISTOR")
+            ("pspice_path"	"R_R7")
+            ("level"	"0")
+            ("model_params"
+                ("VALUE"
+                    ("value"	"1M")
+                    ("pspice_param"	"VALUE")
+                )
+                ("Source"
+                    ("value"	"https://item.szlcsc.com/3530195.html")
+                    ("pspice_param"	"Source")
+                )
+                ("Link"
+                    ("value"	"")
+                    ("pspice_param"	"Link")
+                )
+            )
+        )
+        ("R4"
+            ("device_name"	"RESISTOR")
+            ("pspice_path"	"R_R4")
+            ("level"	"0")
+            ("model_params"
+                ("VALUE"
+                    ("value"	"10K")
+                    ("pspice_param"	"VALUE")
+                )
+                ("Source"
+                    ("value"	"https://item.szlcsc.com/3530239.html")
+                    ("pspice_param"	"Source")
+                )
+                ("Link"
+                    ("value"	"")
+                    ("pspice_param"	"Link")
+                )
+            )
+        )
+        ("R2"
+            ("device_name"	"RESISTOR")
+            ("pspice_path"	"R_R2")
+            ("level"	"0")
+            ("model_params"
+                ("VALUE"
+                    ("value"	"1K")
+                    ("pspice_param"	"VALUE")
+                )
+                ("Source"
+                    ("value"	"https://item.szlcsc.com/3530260.html")
+                    ("pspice_param"	"Source")
+                )
+                ("Link"
+                    ("value"	"")
+                    ("pspice_param"	"Link")
+                )
+            )
+        )
+        ("R3"
+            ("device_name"	"RESISTOR")
+            ("pspice_path"	"R_R3")
+            ("level"	"0")
+            ("model_params"
+                ("VALUE"
+                    ("value"	"1K")
+                    ("pspice_param"	"VALUE")
+                )
+                ("Source"
+                    ("value"	"https://item.szlcsc.com/3530260.html")
+                    ("pspice_param"	"Source")
+                )
+                ("Link"
+                    ("value"	"")
+                    ("pspice_param"	"Link")
+                )
+            )
+        )
+        ("R5"
+            ("device_name"	"RESISTOR")
+            ("pspice_path"	"R_R5")
+            ("level"	"0")
+            ("model_params"
+                ("VALUE"
+                    ("value"	"1M")
+                    ("pspice_param"	"VALUE")
+                )
+                ("Source"
+                    ("value"	"https://item.szlcsc.com/3530195.html")
+                    ("pspice_param"	"Source")
+                )
+                ("Link"
+                    ("value"	"")
+                    ("pspice_param"	"Link")
+                )
+            )
+        )
+        ("R13"
+            ("device_name"	"RESISTOR")
+            ("pspice_path"	"R_R13")
+            ("level"	"0")
+            ("model_params"
+                ("VALUE"
+                    ("value"	"1K")
+                    ("pspice_param"	"VALUE")
+                )
+                ("Source"
+                    ("value"	"https://item.szlcsc.com/3530260.html")
+                    ("pspice_param"	"Source")
+                )
+                ("Link"
+                    ("value"	"")
+                    ("pspice_param"	"Link")
+                )
+            )
+        )
+        ("R14"
+            ("device_name"	"RESISTOR")
+            ("pspice_path"	"R_R14")
+            ("level"	"0")
+            ("model_params"
+                ("VALUE"
+                    ("value"	"1K")
+                    ("pspice_param"	"VALUE")
+                )
+                ("Source"
+                    ("value"	"https://item.szlcsc.com/3530260.html")
+                    ("pspice_param"	"Source")
+                )
+                ("Link"
+                    ("value"	"")
+                    ("pspice_param"	"Link")
+                )
+            )
+        )
+        ("D5"
+            ("device_name"	"LED")
+            ("pspice_path"	"X_D5")
+            ("level"	"0")
+            ("model_params"
+                ("Source"
+                    ("value"	"https://item.szlcsc.com/153634.html")
+                    ("pspice_param"	"Source")
+                )
+                ("Link"
+                    ("value"	"")
+                    ("pspice_param"	"Link")
+                )
+            )
+        )
+        ("R9"
+            ("device_name"	"RESISTOR")
+            ("pspice_path"	"R_R9")
+            ("level"	"0")
+            ("model_params"
+                ("VALUE"
+                    ("value"	"1K")
+                    ("pspice_param"	"VALUE")
+                )
+                ("Source"
+                    ("value"	"https://item.szlcsc.com/3530260.html")
+                    ("pspice_param"	"Source")
+                )
+                ("Link"
+                    ("value"	"")
+                    ("pspice_param"	"Link")
+                )
+            )
+        )
+        ("R12"
+            ("device_name"	"RESISTOR")
+            ("pspice_path"	"R_R12")
+            ("level"	"0")
+            ("model_params"
+                ("VALUE"
+                    ("value"	"1K")
+                    ("pspice_param"	"VALUE")
+                )
+                ("Source"
+                    ("value"	"https://item.szlcsc.com/3530260.html")
+                    ("pspice_param"	"Source")
+                )
+                ("Link"
+                    ("value"	"")
+                    ("pspice_param"	"Link")
+                )
+            )
+        )
+        ("R10"
+            ("device_name"	"RESISTOR")
+            ("pspice_path"	"R_R10")
+            ("level"	"0")
+            ("model_params"
+                ("VALUE"
+                    ("value"	"22R")
+                    ("pspice_param"	"VALUE")
+                )
+                ("Source"
+                    ("value"	"https://item.szlcsc.com/3530297.html")
+                    ("pspice_param"	"Source")
+                )
+                ("Link"
+                    ("value"	"")
+                    ("pspice_param"	"Link")
+                )
+            )
+        )
+        ("R11"
+            ("device_name"	"RESISTOR")
+            ("pspice_path"	"R_R11")
+            ("level"	"0")
+            ("model_params"
+                ("VALUE"
+                    ("value"	"22R")
+                    ("pspice_param"	"VALUE")
+                )
+                ("Source"
+                    ("value"	"https://item.szlcsc.com/3530297.html")
+                    ("pspice_param"	"Source")
+                )
+                ("Link"
+                    ("value"	"")
+                    ("pspice_param"	"Link")
+                )
+            )
+        )
+        ("R6"
+            ("device_name"	"RESISTOR")
+            ("pspice_path"	"R_R6")
+            ("level"	"0")
+            ("model_params"
+                ("VALUE"
+                    ("value"	"10K")
+                    ("pspice_param"	"VALUE")
+                )
+                ("Source"
+                    ("value"	"https://item.szlcsc.com/3530239.html")
+                    ("pspice_param"	"Source")
+                )
+                ("Link"
+                    ("value"	"")
+                    ("pspice_param"	"Link")
+                )
+            )
+        )
+        ("R1"
+            ("device_name"	"RESISTOR")
+            ("pspice_path"	"R_R1")
+            ("level"	"0")
+            ("model_params"
+                ("VALUE"
+                    ("value"	"10K")
+                    ("pspice_param"	"VALUE")
+                )
+                ("Source"
+                    ("value"	"https://item.szlcsc.com/3530239.html")
+                    ("pspice_param"	"Source")
+                )
+                ("Link"
+                    ("value"	"")
+                    ("pspice_param"	"Link")
+                )
+            )
+        )
+        ("R8"
+            ("device_name"	"RESISTOR")
+            ("pspice_path"	"R_R8")
+            ("level"	"0")
+            ("model_params"
+                ("VALUE"
+                    ("value"	"1K")
+                    ("pspice_param"	"VALUE")
+                )
+                ("Source"
+                    ("value"	"https://item.szlcsc.com/3530260.html")
+                    ("pspice_param"	"Source")
+                )
+                ("Link"
+                    ("value"	"")
+                    ("pspice_param"	"Link")
+                )
+            )
+        )
+        ("R15"
+            ("device_name"	"RESISTOR")
+            ("pspice_path"	"R_R15")
+            ("level"	"0")
+            ("model_params"
+                ("VALUE"
+                    ("value"	"10K")
+                    ("pspice_param"	"VALUE")
+                )
+                ("Source"
+                    ("value"	"https://item.szlcsc.com/3530239.html")
+                    ("pspice_param"	"Source")
+                )
+                ("Link"
+                    ("value"	"")
+                    ("pspice_param"	"Link")
+                )
+            )
+        )
+        ("R17"
+            ("device_name"	"RESISTOR")
+            ("pspice_path"	"R_R17")
+            ("level"	"0")
+            ("model_params"
+                ("VALUE"
+                    ("value"	"10K")
+                    ("pspice_param"	"VALUE")
+                )
+                ("Link"
+                    ("value"	"")
+                    ("pspice_param"	"Link")
+                )
+                ("Source"
+                    ("value"	"https://item.szlcsc.com/3530239.html")
+                    ("pspice_param"	"Source")
+                )
+            )
+        )
+        ("R16"
+            ("device_name"	"RESISTOR")
+            ("pspice_path"	"R_R16")
+            ("level"	"0")
+            ("model_params"
+                ("VALUE"
+                    ("value"	"1K")
+                    ("pspice_param"	"VALUE")
+                )
+                ("Source"
+                    ("value"	"https://item.szlcsc.com/3530260.html")
+                    ("pspice_param"	"Source")
+                )
+                ("Link"
+                    ("value"	"")
+                    ("pspice_param"	"Link")
+                )
+            )
+        )
+        ("D7"
+            ("device_name"	"LED")
+            ("pspice_path"	"X_D7")
+            ("level"	"0")
+            ("model_params"
+                ("Source"
+                    ("value"	"https://item.szlcsc.com/3215917.html")
+                    ("pspice_param"	"Source")
+                )
+                ("Link"
+                    ("value"	"")
+                    ("pspice_param"	"Link")
+                )
+            )
+        )
+        ("D2"
+            ("device_name"	"LED")
+            ("pspice_path"	"X_D2")
+            ("level"	"0")
+            ("model_params"
+                ("Source"
+                    ("value"	"https://item.szlcsc.com/3215917.html")
+                    ("pspice_param"	"Source")
+                )
+                ("Link"
+                    ("value"	"")
+                    ("pspice_param"	"Link")
+                )
+            )
+        )
+        ("D8"
+            ("device_name"	"LED")
+            ("pspice_path"	"X_D8")
+            ("level"	"0")
+            ("model_params"
+                ("Source"
+                    ("value"	"https://item.szlcsc.com/153634.html")
+                    ("pspice_param"	"Source")
+                )
+                ("Link"
+                    ("value"	"")
+                    ("pspice_param"	"Link")
+                )
+            )
+        )
+    )
+)

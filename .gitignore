@@ -1,7 +1,8 @@
-.jrl*
-.log*
-.dmp
-.tag
-.SAV
-.txt*
+*.jrl*
+*.log*
+*.dmp
+*.tag
+*.SAV
+*.txt*
 
+*~
