@@ -4,5 +4,6 @@
 *.tag
 *.SAV
 *.txt*
+*.lck
 
 *~
